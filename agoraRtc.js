@@ -41,8 +41,11 @@ function addVideoStream(streamId){
     let streamDiv = document.createElement("div"); // canvasContainer
     streamDiv.id = streamId;
     // streamDiv.style.transform = "rotateY(180deg)";
-    streamDiv.style.height = "200px";
-    streamDiv.style.width = "300px";
+    streamDiv.style.display = "inline-block";
+    streamDiv.style.height = "100px";
+    streamDiv.style.width = "150px";
+    streamDiv.style.margin = "auto 0px";
+    streamDiv.style.textAlign = "left";
     remoteContainer.appendChild(streamDiv);
 } 
 document.getElementById("leave").onclick = function () {
@@ -54,7 +57,7 @@ document.getElementById("leave").onclick = function () {
 document.getElementById("join").onclick = function () {
     let channelName = document.getElementById("channelName").value;
     let Username = document.getElementById("username").value;
-    let appId = "2025521fc5d645f7b76a0402e2fd9cb7";
+    let appId = "a328a68ba1c14bbea6f737dc228e8fa3";
     //initialize agora client
     client.join(
         null,
@@ -91,21 +94,24 @@ document.getElementById("join").onclick = function () {
         removeVideoStream(evt)
     })
 }
-document.getElementById("video-mute").onclick = function() {
+//  error here
+document.getElementById("video-mute").onclick = function(evt) {
+    let stream = evt.stream;
     if(!isVideoMuted){
-        globalStream.muteVideo();
+        stream.muteVideo();
         isVideoMuted = true;
     } else {
-        globalStream.unmuteVideo();
+        stream.unmuteVideo();
         isVideoMuted = false;
     }
 }
-document.getElementById("audio-mute").onclick = function() {
+document.getElementById("audio-mute").onclick = function(evt) {
+    let stream = evt.stream;
     if(!isAudioMuted){
-        globalStream.muteAudio();
+        stream.muteAudio();
         isVideoMuted = true;
     } else {
-        globalStream.unmuteAudio();
+        stream.unmuteAudio();
         isVideoMuted = false;
     }
 }

@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <title>Agora Certificate Day-1</title>
@@ -7,32 +8,37 @@
     </head>
     <body id="container">
         <div id="flexContainer">
-            <div class="left-pane">
+        <div class="left-pane">
             <div class="logo">
-                <img src="assets/agoraLogo.png" id="img-container"/>
+                <img src="assets/TwoHeadsImageOne.jpg" id="img-container"/>
             </div>
-            <div class="loginContainer">
-                <span id="headingText">Login and enjoy <span id="highlighted">Unlimited</span> video calling</span>
-                <br/>
-                <form action="./index.html" onsubmit="return validate()">
-                <input type="text" id="email" placeholder="Email" name="email"/>
-                <br/>
-                <input type="password" id="password" placeholder="password" name="password"/>
-                <button class="submitButton" type="submit" onclick="validate()">Login</button>
-                </form>
-            </div>
+            <span id="headingText"><span id="highlighted">TWO HEADS</span> are better than one</span>
+            <form action="./index.html" onsubmit="return validate()">
+            <input type="text" id="email" placeholder="Enter your email here" name="email"/>
+            <br/>
+            <input type="password" id="password" placeholder="Enter your password here" name="password"/>
+            <br/>
+            <button class="submitButton" type="submit" onclick="validate()">Login</button>
+            </form>
         </div>
-        <div id="right-pane">
-            <div id="circleContainer">
-                <div id="illustrationContainer">
-                    <img id="illustration" src="assets/Video_Conf.svg"/>
+        <div class="right-pane-index">
+            <div id="chatText">
+                <div id="bottomTextDiv">
+                    <span id="bottomText">Unlimited Video Calling</span>
+                </div>
+                <div id="bottomTextDiv">
+                    <span id="bottomText">Up to 4</span>
+                </div>
+                <div id="bottomTextDiv">
+                    <span id="bottomText">Because Two Heads are Better Than One</span>
                 </div>
             </div>
-            <span id="bottomText">Chat with your <strong>closest friends</strong>  no matter how far they are</span>
+            <div id="illustrationContainer">
+                    <img style="height: 200px" id="illustration" src="assets/TwoHeadsImageTwo.jpg"/>
+            </div>
         </div>
     </div>
     <script>
-
         function validate(){
             let email = document.getElementById("email")
             let password = document.getElementById("password")
@@ -53,6 +59,16 @@
                 }
             }else{
                 email.className = "incorrect"
+                if(password.value.length >= 8){
+                    password.className = ""
+
+                    return false
+                }
+                else
+                {
+                    password.className = "incorrect"
+                    return false
+                }
                 return false
             }
         }
