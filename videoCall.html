@@ -1,4 +1,3 @@
-Video Call
 <html>
     <head>
         <title>Video Calling</title>
@@ -9,17 +8,37 @@ Video Call
     <body>
         <div class="flexContainer">
             <div class="left-pane-video">
-                    <div class="logo">
-                        <img src="assets/TwoHeadsImageOne.jpg" id="img-container"/>
-                    </div>
-                    <span class="headingText">
-                        Join A Chat!
-                    </span>
-                    <input type="text" id="username" placeholder="Username" value="Elana">
-                    <input type="text" id="channelName" placeholder="ChannelName" value="Pass">
                     <br/>
-                    <button class="submitButton" id="join">Join</button>
-                    <button class="submitButton" style="background-color: red" id="leave">Leave</button>
+                    <br/>
+                    <div style="margin-top: 25px">
+                        <span style="font-size: 30px"class="headingText">
+                            Join A Call!
+                        </span>
+                    </div>
+                    <input style="margin-top: 25px" type="text" id="username" placeholder="Username" value="Enter name here">
+                    <input style="margin-top: 25px" type="text" id="channelName" placeholder="ChannelName" value="Enter password here">
+                    <br/>
+                    <button style="margin-top: 25px" class="submitButton" id="join">Join</button>
+                    <button style="margin-top: 25px" class="submitButton" style="background-color: red" id="leave">Leave</button>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <!-- to do list need css: checked, addBtn, myDiv, header, myInput, need js: new element -->
+                    <div style="margin-top: 25px">
+                        <span style="font-size: 30px"class="headingText">
+                            My Tasks
+                        </span>
+                    </div>
+                    <div style="margin-top: 30px"id="myDIV" class="header">
+                        <input type="text" id="myInput" placeholder="Title...">
+                        <span onclick="newElement()" class="submitButton">Add</span>
+                    </div>
+                    
+                    <ul id="myUL">
+                        <li class="checked">Create The Slideshow</li>
+                        <li >Email Teacher About Due Date</li>
+                        <li>Read Chapters 1 and 2</li>
+                    </ul>
             </div>
                 <div class="right-pane">
                     <div id="SelfStream">
@@ -35,13 +54,13 @@ Video Call
                     <div class="controls">
                         <div class="icon" id="video-mute">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
                             </svg>
                         </div>
                         <div class="icon" id="audio-mute">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clip-rule="evenodd" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clip-rule="evenodd" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
                             </svg>
                         </div>
                     </div>
