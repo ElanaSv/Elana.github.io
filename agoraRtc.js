@@ -41,7 +41,7 @@ function addVideoStream(streamId){
     let remoteContainer = document.getElementById("RemoteStream"); // remoteContainer
     let streamDiv = document.createElement("div"); // canvasContainer
     streamDiv.id = streamId;
-    // streamDiv.style.transform = "rotateY(180deg)";
+    //streamDiv.style.transform = "rotateY(180deg)";
     streamDiv.style.display = "inline-block";
     streamDiv.style.height = "100px";
     streamDiv.style.width = "150px";
