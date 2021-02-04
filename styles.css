@@ -102,7 +102,7 @@ input{
     height: 225px;
 }
 
-#RemoteStream{
+#remote-container{
     display: inline-block;
     text-align: left;
     margin: auto 25px;
