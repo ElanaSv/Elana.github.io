@@ -38,7 +38,7 @@ function removeVideoStream(evt) {
     remDiv.parentNode.removeChild(remDiv);
 }
 function addVideoStream(streamId){
-    let remoteContainer = document.getElementById("RemoteStream"); // remoteContainer
+    let remoteContainer = document.getElementById("remote-container"); // remoteContainer
     let streamDiv = document.createElement("div"); // canvasContainer
     streamDiv.id = streamId;
     //streamDiv.style.transform = "rotateY(180deg)";
