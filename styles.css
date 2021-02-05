@@ -104,10 +104,10 @@ input{
 }
 #remoteDiv{
      width: 100%;
+    display: table;
 }
-#remote-container{
-    display: inline-block;
-    text-align: left;
+#remote-container {
+    display: table-cellj;
     margin: auto 25px;
     justify-self: center;
     align-self: center;
